@@ -1,10 +1,6 @@
 <template id="main-page">
   <v-ons-page>
-    <v-ons-toolbar>
-      <div class="left">
-        <v-ons-toolbar-button icon="ion-navicon, material: md-menu"></v-ons-toolbar-button>
-        
-      </div>
+    <v-ons-toolbar class="titulo" modifier="material noshadow">
       <div class="center">Les TT</div>
       <div class="right">
         <v-ons-toolbar-button icon="ion-navicon, material: md-heart"></v-ons-toolbar-button>
@@ -40,7 +36,16 @@
 </template>
 
 <style>
-  /* CSS goes here */
+.titulo,
+.tabbar--material,
+.fab {
+  background: #2095f2;
+  background: -moz-linear-gradient(left, #2095f2 0%, #00bbd3 100%);
+  background: -webkit-linear-gradient(left, #2095f2 0%, #00bbd3 100%);
+  background: linear-gradient(to right, #2095f2 0%, #00bbd3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2095f2', endColorstr='#00bbd3', GradientType=1);
+}
+
 </style>
 
 <script>
