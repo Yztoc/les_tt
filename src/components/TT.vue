@@ -15,7 +15,7 @@
       :tabs="tabs"
       :on-swipe="onSwipe"
       :tabbar-style="swipeTheme"
-      style="position : fixed"
+      style="position : fixed;"
     />
   </v-ons-page>
 </template>
@@ -25,9 +25,9 @@ import Home from './pages/Home.vue';
 import Add from './pages/Add.vue';
 import Settings from './pages/Settings.vue';
 const lerp = (x0, x1, t) => parseInt((1 - t) * x0 + t * x1, 10);
-const red = [244, 67, 54];
-const blue = [30, 136, 229];
-const purple = [103, 58, 183];
+const red = [40, 40, 51];
+const blue = [40, 40, 51];
+const purple = [40, 40, 51];
 export default {
   data () {
     return {
@@ -37,7 +37,7 @@ export default {
         {
           icon: this.md() ? 'md-home' : 'ion-home',
           page: Home,
-          theme: red
+          theme: red,
         },
         {
           icon: this.md() ? 'md-plus' : 'ion-add',
@@ -82,15 +82,20 @@ body{
 .titulo,
 .tabbar--material,
 .fab {
-  background: #383838;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top,  #000000,#383838);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top,  #000000,#181717); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-background: #181717;
+  background: #032533;  /* fallback for old browsers */
+
 }
 
 .main{
-background: #181717;  /* fallback for old browsers */
+  background: #032533;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top,  #000000,#032533);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top,  #000000,#032533); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
+.ons-icon,
+.list-item,
+.toolbar__title{
+  color: white;
 }
 
 </style>
