@@ -1,7 +1,7 @@
 
 <template>
   <v-ons-page>
-    <v-ons-toolbar class="titulo" modifier="material noshadow">
+    <v-ons-toolbar class="titulo" modifier="material noshadow" style="position:relative">
         <div class="center">Les TT</div>
         <div class="right">
           <v-ons-toolbar-button icon="ion-navicon, material: md-heart"></v-ons-toolbar-button>
@@ -55,7 +55,7 @@ export default {
   computed: {
     swipeTheme() {
       return {
-        backgroundColor: `rgb(${this.colors.join(',')})`,
+        backgroundColor: `#032533`,
         transition: `all ${this.animationOptions.duration || 0}s ${this.animationOptions.timing || ''}`
       }
     }
@@ -90,7 +90,7 @@ body{
   background: #032533;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to top,  #000000,#032533);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to top,  #000000,#032533); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+min-height: 100%;
 }
 .ons-icon,
 .list-item,
@@ -98,4 +98,7 @@ background: linear-gradient(to top,  #000000,#032533); /* W3C, IE 10+/ Edge, Fir
   color: white;
 }
 
+.toolbar--material{
+  box-shadow: none;
+}
 </style>
