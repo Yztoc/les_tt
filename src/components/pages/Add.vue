@@ -8,13 +8,12 @@
         </p>
         <p>
           <ons-input id="description" modifier="underbar" placeholder="Description" float ng-model="page.description"></ons-input>
-        </p>
+        </p>  
+        <GoogleMap></GoogleMap>
         <p style="margin-top: 30px;">
           <ons-button ng-click="">Créer</ons-button>
         </p>
-        <p>
-          <GoogleMap></GoogleMap>
-        </p>
+        
       </div>
     </v-div>
    </v-ons-page>
