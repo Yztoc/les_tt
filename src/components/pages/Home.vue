@@ -25,20 +25,9 @@
 
 
 <script>
-const homePage = {
-  template: '#home',
-  props: ['myProp']
-};
 
-const newsPage = {
-  template: '#news'
-};
-
-const settingsPage = {
-  template: '#settings'
-};
 export default {
-  name: 'App',
+  name: 'Home',
   data() {
     return {
     }

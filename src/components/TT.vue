@@ -1,7 +1,7 @@
 
 <template>
   <v-ons-page>
-    <v-ons-toolbar class="titulo" modifier="material noshadow">
+    <v-ons-toolbar class="titulo" modifier="material noshadow" style="position:relative">
         <div class="center">Les TT</div>
         <div class="right">
           <v-ons-toolbar-button icon="ion-navicon, material: md-heart"></v-ons-toolbar-button>
@@ -25,7 +25,7 @@ import Home from './pages/Home.vue';
 import Add from './pages/Add.vue';
 import Settings from './pages/Settings.vue';
 const lerp = (x0, x1, t) => parseInt((1 - t) * x0 + t * x1, 10);
-const red = [40, 40, 51];
+const red = [0, 0, 0];
 const blue = [40, 40, 51];
 const purple = [40, 40, 51];
 export default {
@@ -55,7 +55,7 @@ export default {
   computed: {
     swipeTheme() {
       return {
-        backgroundColor: `rgb(${this.colors.join(',')})`,
+        backgroundColor: `#6a85b6`,
         transition: `all ${this.animationOptions.duration || 0}s ${this.animationOptions.timing || ''}`
       }
     }
@@ -76,21 +76,14 @@ export default {
 </script>
 
 <style>
-body{
-  color:red!important;
-}
+
 .titulo,
 .tabbar--material,
 .fab {
-  background: #032533;  /* fallback for old browsers */
-
+  background: #bac8e0;
 }
-
 .main{
-  background: #032533;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top,  #000000,#032533);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top,  #000000,#032533); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);min-height: 100%;
 }
 .ons-icon,
 .list-item,
@@ -98,4 +91,7 @@ background: linear-gradient(to top,  #000000,#032533); /* W3C, IE 10+/ Edge, Fir
   color: white;
 }
 
+.toolbar--material{
+  box-shadow: none;
+}
 </style>
