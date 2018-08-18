@@ -11,5 +11,6 @@ export default new Router({
       name: 'TT.vue',
       component: TT
     }
+    
   ]
 })

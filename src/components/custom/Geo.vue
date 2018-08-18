@@ -14,7 +14,7 @@
     <gmap-map
       :center="center"
       :zoom="12"
-      style="width:100%;  height: 30vh;"
+      style="width:90%;  height: 35vh;display:block;margin:auto;"
     >
       <gmap-marker
         :key="index"
@@ -72,3 +72,11 @@ export default {
   }
 };
 </script>
+<style>
+.text-input,.text-input__label,.text-input--material__label,.text-input--underbar__label{
+color: white;
+ width: 90%; 
+ display:block;
+ margin: auto;
+}
+</style>

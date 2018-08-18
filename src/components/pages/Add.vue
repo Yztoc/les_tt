@@ -9,6 +9,18 @@
         <p>
           <ons-input id="description" modifier="underbar" placeholder="Description" float ng-model="page.description"></ons-input>
         </p>  
+        <p>
+           <v-ons-select style="width: 40%"
+            v-model="selectedItem"
+          >
+            <option v-for="(item,i) in items" :key="i" :value="item.value">
+              {{ item.text }}
+            </option>
+          </v-ons-select>
+        </p>
+        <p>
+           <ons-input type="file" multiple :name="uploadFieldName" :disabled="isSaving" @change="filesChange($event.target.name, $event.target.files); fileCount = $event.target.files.length" accept="image/*" class="input-file"></ons-input>
+        </p>
         <GoogleMap></GoogleMap>
         <p style="margin-top: 30px;">
           <ons-button ng-click="">Créer</ons-button>
@@ -30,7 +42,11 @@ export default {
   },
   data() {
     return {
-
+     items: [
+        { text: 'Grp1', value: 'id1' },
+        { text: 'Grp2', value: 'id2' },
+        { text: 'Grp3', value: 'id3' }
+      ],
     };
   },
  mounted() {
@@ -50,8 +66,12 @@ export default {
 .card {
   margin: 0px;
 }
-.text-input {
-  color: white;
+.text-input,.text-input__label,.text-input--material__label,.text-input--underbar__label{
+float: left; 
+color: white;
+}
+ons-input, ons-radio, ons-checkbox, ons-search-input{
+ width: 90%; 
 }
 </style>
 
